@@ -1,0 +1,191 @@
+
+// MOBILE
+
+@media only screen and (max-width: 800px) {
+
+  // collapse sqs layouts
+  @import 'sqs-grid-breaker';
+
+  // hide blog sidebar
+  .collection-type-blog {
+    #sidebarWrapper { width: auto !important; position: static !important; margin-top: @blogPostSpacing; }
+    #mainContent { margin: 0 !important;}
+  }
+
+  .collection-type-gallery {
+
+    #page {
+      width: auto;
+      margin: 20px 0;
+      #galleryWrapper { height: auto;}
+      #slideshow {
+        opacity: 1;
+        .slide { margin: 0 4px 4px 0; }
+        img { width: 100%; }
+      }
+      #thumbList { display: none; }
+    }
+
+    #footer {
+      margin-top: 20px;
+    }
+
+  }
+
+
+  // normalize header
+  #headerWrapper { position: static !important; }
+  .top-navigation-split {
+    #topNav { position: static !important; right: auto !important; }
+  }
+  #logo { margin-bottom: 10px; margin-right: @navPadding;}
+  #topNav nav { bottom: 0; }
+  #topNav nav a { line-height: 1.6em; }
+
+  #canvas { padding: 20px; }
+
+  .thumb-list { font-size: 0; }
+  .thumb-list .thumb { display: block !important; margin: 0 0 @indexItemPadding 0; cursor: pointer;
+    img { height: auto !important; width: 100%; }
+  }
+
+  #logo {
+    width:100%;
+    margin-right:0!important;
+    text-align:center;
+  }
+
+  .logo-image .logo { margin-bottom: 20px; }
+
+  .site-title h1.logo, .logo-subtitle {
+    display:block;
+  }
+
+  #canvasWrapper, #slideshowWrapper, #slideshow { overflow: visible !important; }
+
+  #header #topNav { display: none; }
+  #mobileMenuLink {
+    margin: 0;
+    display: block;
+    .nav-font;
+    padding:0 0 15px;
+    background-color:@siteBackground;
+    text-align:center;
+    a { cursor: pointer; display: block; margin: 0; font-size: 16px !important; color:@navColor; }
+  }
+
+  #mobileMenuLink.hidden { display: none; }
+
+  // #header #mobileNav { height:auto; overflow:visible; }
+
+  #mobileNav {
+    background: @mobileNavBackground; margin:0 0 15px;
+
+    .wrapper { padding:1em 0; }
+    nav + nav { margin: 0 0 1em; }
+    nav ul li { display: block; text-align: center; float: none !important; }
+    a, label { color: fadeout(@navColor, 30%); font-size: 16px !important; line-height: 2.5em !important; .nav-font; }
+    .active-link a { color: @navColor; }
+    li a:hover { color: @navColor; }
+    li a:after { display: none !important; }
+
+    .subnav {
+      height: 0;
+      overflow: hidden;
+      background: lighten(@mobileNavBackground, 5%);
+    }
+  }
+
+  // mobile nav folders
+  #mobileNav .folder-toggle-box {
+    display: none;
+    visibility: hidden;
+  }
+  #mobileNav .folder-toggle-box:checked ~ .subnav {
+    height: auto;
+    overflow: visible;
+  }
+  #mobileNav .folder-toggle-label { margin-left: 0.4em; /* offset after content */ }
+  #mobileNav .folder-toggle-label:after { content: ' +'; }
+  #mobileNav .folder-toggle-box:checked ~ .folder-toggle-label:after { content: ' –'; }
+
+
+  .collection-type-blog {
+    &.blog-sidebar-right {
+      #footerWrapper { margin-right:0; }
+    }
+  }
+
+  /* CATEGORY NAV MOBILE
+  ----------------------------------------------*/
+
+  .category-nav-toggle-label {
+    display: block;
+    visibility: visible;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0.5em;
+    right: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.8em;
+    text-align: right;
+    &:after {
+      font-size: 21px;
+      content: "+";
+      display: block;
+      text-align: right;
+    }
+  }
+
+  #categoryNav {
+    margin-bottom: 25px;
+    position: relative;
+    padding: 0 12px;
+    background-color: rgba(150, 150, 150, 0.1);
+    ul {
+      text-align: left;
+      font-size: 14px;
+      margin: 0px 10% 0 0;
+      padding: 0;
+      line-height: 1.8em;
+      li {
+        margin: 0;
+        display: none;
+        &.filter {
+          display: block;
+          visibility: visible;
+        }
+      }
+      li a {
+        display: block;
+        font-size: 14px;
+        padding: 0.5em 0;
+
+        &:hover {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  #categoryNav #categoryNavToggle:checked {
+    + .category-nav-toggle-label {
+      z-index: 0;
+      &:after {
+        content: '–';
+      }
+    }
+    ~ .category-nav {
+      ul {
+        z-index: 2;
+        li:not(.filter) {
+          display: block;
+        }
+      }
+    }
+  }
+
+}
+

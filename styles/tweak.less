@@ -1,0 +1,236 @@
+
+/* GENERAL
+---------------------------------------------------*/
+
+// tweak: { "category" : "General", "type" : "dropdown", "title" : "Site Alignment", options: [ "Left", "Center", "Right" ], "target" : "#canvas" }
+
+// tweak: { "category" : "General", "type" : "value", "title" : "Outside Padding", min: 20, max: 100, step: 5, "target" : "#canvas", property: ["padding-top", "padding-bottom", "padding-left", "padding-right"], js: true }
+@outerPadding: 50px;
+
+// tweak: { "category" : "General", "type" : "value", "title" : "Page Width", min: 600, max: 1800, step: 10, "showOnlyWhenPresent" : "body:not(.collection-type-gallery) #page", "target" : "body:not(.collection-type-gallery) #page", property: "width" }
+@siteWidth: 960px;
+
+// tweak: { "category" : "General", "type" : "value", "title" : "Page Padding", min: 20, max: 100, step: 5, "target" : "#page", property: "margin-top" }
+@pagePadding: 50px;
+
+// tweak: { "category" : "General", "type" : "color", "title" : "Site Background", "target" : "body" }
+@siteBackground: #fff;
+
+
+/* HEADER
+---------------------------------------------------*/
+
+// tweak: { "category" : "Site Header", "type" : "dropdown", "title" : "Header Navigation", options: [ "Normal", "Split", "Stacked" ], "target" : "#header", "showOnlyWhenPresent" : "body:not(.site-alignment-center)"  }
+
+// tweak: { "category" : "Site Header", "type" : "value", "title" : "Header Padding", min: 0, max: 100, step: 5, "target" : "#header", property: "padding-bottom", js: true }
+@headerPadding: 30px;
+
+// tweak: { "category" : "Site Header", "type" : "value", "title" : "Logo Image Size (Max)", min: 10, max: 200, "showOnlyWhenPresent" : ".logo-image .logo", "target" : "#header", property: "height", js: true }
+@logoSize: 40px;
+
+// tweak: { "category" : "Site Header", "type" : "font", "title" : "Site Title Font", "showOnlyWhenPresent" : ".site-title .logo", "target" : "h1.logo" }
+.site-title-font {
+  font-family: Varela Round, Helvetica, arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2em;
+  text-transform: normal;
+  font-size: 36px;
+  letter-spacing: 0px;
+}
+
+// tweak: { "category" : "Site Header", "type" : "color", "title" : "Site Title Color", "showOnlyWhenPresent" : ".site-title .logo", "target" : "h1.logo" }
+@siteTitleColor: #111;
+
+// tweak: { "category" : "Site Header", "type" : "font", "title" : "Site Subtitle Font", "showOnlyWhenPresent" : ".logo-subtitle", "target" : ".logo-subtitle" }
+.site-sub-title-font {
+  font-family: "Helvetica", arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2em;
+  font-size: 12px;
+  text-transform: normal;
+  letter-spacing: 0px;
+}
+
+// tweak: { "category" : "Site Header", "type" : "color", "title" : "Site Subtitle Color", "showOnlyWhenPresent" : ".logo-subtitle", "target" : ".logo-subtitle" }
+@siteSubTitleColor: #aaa;
+
+
+/* NAVIGATION
+---------------------------------------------------*/
+
+// tweak: { "category" : "Navigation", "type" : "font", "title" : "Navigation Font", "showOnlyWhenPresent" : ".main-nav ul li", "target" : "#topNav" }
+.nav-font {
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: normal;
+  font-size: 14px;
+  letter-spacing: 0px;
+}
+
+// tweak: { "category" : "Navigation", "type" : "color", "title" : "Navigation Color", "showOnlyWhenPresent" : ".main-nav ul li", "target" : "#topNav" }
+@navColor: #9c9c9c;
+
+// tweak: { "category" : "Navigation", "type" : "color", "title" : "Navigation (Active) Color", "showOnlyWhenPresent" : ".main-nav ul li", "target" : "#topNav" }
+@navActiveColor: #000;
+
+// tweak: { "category" : "Navigation", "type" : "color", "title" : "Navigation (Hover) Color", "showOnlyWhenPresent" : ".main-nav ul li", "target" : "#topNav" }
+@navHoverColor: #000;
+
+// tweak: { "category" : "Navigation", "type" : "value", "title" : "Navigation Spacing", "showOnlyWhenPresent" : ".main-nav ul li + li", min: 0, max: 100, step: 5, "target" : "#topNav" }
+@navPadding: 30px;
+
+// tweak: { "category" : "Navigation", "type" : "value", "title" : "Navigation Alignment", "showOnlyWhenPresent" : "body:not(.header-navigation-stacked) .main-nav ul li", min: 0, max: 30, "target" : "#topNav" }
+@navAlignment: 8px;
+
+// tweak: { "category" : "Navigation", "type" : "color", "title" : "Mobile Nav Background", "showOnlyWhenPresent" : ".mobile-nav", "target" : ".mobile-nav" }
+@mobileNavBackground: #111;
+
+
+/* BANNER
+---------------------------------------------------*/
+
+
+/* MAIN CONTENT
+---------------------------------------------------*/
+
+// tweak: { "category" : "Main Content", "type" : "font", "title" : "Headings Font", "target" : "h1:not(.logo), h2, h3", loadAllVariants: true }
+.headings-font {
+  font-family: Varela Round, arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.4em;
+  text-transform: normal;
+  font-size: 24px;
+  letter-spacing: 0px;
+}
+
+// tweak: { "category" : "Main Content", "type" : "color", "title" : "Headings Color", "target" : "h1:not(.logo), h2, h3" }
+@headingsColor: #111;
+
+// tweak: { "category" : "Main Content", "type" : "font", "title" : "Body Text Font", "target" : "#mainContent", loadAllVariants: true }
+.body-font {
+  font-family: Helvetica, arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6em;
+  font-size: 12px;
+  letter-spacing: 0px;
+}
+
+// tweak: { "category" : "Main Content", "type" : "color", "title" : "Body Text Color", "target" : "#mainContent, .summary-metadata-item a" }
+@bodyTextColor: #666;
+
+// tweak: { "category" : "Main Content", "type" : "color", "title" : "Body Link Color", "target" : "#mainContent a" }
+@bodyLinkColor: #000;
+
+// tweak: { "category" : "Main Content", "type" : "color", "title" : "Body Link (Hover) Color", "target" : "#mainContent a" }
+@bodyLinkHoverColor: #444;
+
+// tweak: { "category" : "Main Content", "type" : "checkbox", "title" : "Body Links Underlined", "target" : "#mainContent a", default:false }
+
+// tweak: { "category" : "Main Content", "type" : "font", "title" : "Quote Font", "target" : "blockquote" }
+.quote-font {
+  font-family: Helvetica, arial, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.4em;
+  font-size: 16px;
+  letter-spacing: 0px;
+}
+
+
+/* BLOG STYLES
+---------------------------------------------------*/
+
+// tweak: { "category" : "Blog", "type" : "dropdown", "title" : "Blog Sidebar", options: [ "Right", "Left", "Hidden" ], "target" : ".hentry", "showOnlyWhenPresent" : ".collection-type-blog" }
+
+// tweak: { "category" : "Blog", "type" : "value", "title" : "Blog Sidebar Width", min: 50, max: 700, step: 5, "target" : "#sidebarWrapper", property: "width", "showOnlyWhenPresent" : ".collection-type-blog" }
+@blogSidebarWidth: 180px;
+
+// tweak: { "category" : "Blog", "type" : "value", "title" : "Blog Sidebar Padding", min: 0, max: 150, step: 5, "target" : "#sidebarWrapper", "showOnlyWhenPresent" : ".collection-type-blog" }
+@blogSidebarPadding: 30px;
+
+// tweak: { "category" : "Blog", "type" : "value", "title" : "Blog Post Spacing", min: 0, max: 200, "target" : ".hentry", property: "margin-bottom", "showOnlyWhenPresent" : ".collection-type-blog" }
+@blogPostSpacing: 100px;
+
+// tweak: { "category" : "Blog", "type" : "color", "title" : "Blog Meta Data", "target" : ".collection-type-blog .meta", "showOnlyWhenPresent" : ".collection-type-blog" }
+@blogMetaColor: #aaa;
+
+// tweak: { "category" : "Blog", "type" : "color", "title" : "Share Button Color", "target" : ".sqs-simple-like, .ss-social-button", "showOnlyWhenPresent" : ".collection-type-blog" }
+@shareButtonColor: #333;
+
+// tweak: { "category" : "Blog", "type" : "checkbox", "title" : "Hide Entry Author", "active" : true, "target" : ".collection-type-blog article", "showOnlyWhenPresent" : ".collection-type-blog" }
+
+
+
+/* GALLERY STYLES
+---------------------------------------------------*/
+
+// tweak: { "category" : "Gallery Styles", "title" : "Index Fullwidth", "type" : "checkbox", default:false, "target" : "#mainContent", "showOnlyWhenPresent" : ".collection-type-gallery" }
+
+// tweak: { "category" : "Gallery Styles", "title" : "Index Item Size", "type" : "value", min: 40, max: 500, step: 5, "target" : ".thumb-list .thumb", property: "height", js: true, "showOnlyWhenPresent" : ".collection-type-gallery" }
+@indexItemHeight: 160px;
+
+// tweak: { "category" : "Gallery Styles", "title" : "Index Item Padding", "type" : "value", min: 0, max: 50, "target" : ".thumb-list .thumb", property: ["margin-right", "margin-bottom"], js: true, "showOnlyWhenPresent" : ".collection-type-gallery" }
+@indexItemPadding: 4px;
+
+// tweak: { "category" : "Gallery Styles", "title" : "Gallery Controls", "type" : "dropdown", options: [ "Tiny Thumbnails", "Bullets", "Numbers", "Simple", "Hidden" ], default: "Simple", "target" : "#mainContent", "showOnlyWhenPresent" : ".collection-type-gallery" }
+
+// tweak: { "category" : "Gallery Styles", "title" : "Enable Thumbnail Hover", "type" : "checkbox", default:false, "showOnlyWhenPresent" : ".collection-type-gallery", "target" : "#mainContent" }
+
+// tweak: { "category" : "Gallery Styles", "title" : "Thumb Hover Bg", "type" : "color", "target" : "#mainContent", "showOnlyWhenPresent" : ".collection-type-gallery.enable-thumbnail-hover" }
+@thumbhoverbg: hsla(0%,0%,0%,50%);
+
+// tweak: { "category" : "Gallery Styles", "title" : "Thumb Hover Color", "type" : "color", "target" : "#mainContent", "showOnlyWhenPresent" : ".collection-type-gallery.enable-thumbnail-hover" }
+@thumbhovertitle: #fff;
+
+// tweak: { "category" : "Gallery Styles", "title" : "Thumb Hover Title", "type" : "font", "target" : "#mainContent", "showOnlyWhenPresent" : ".collection-type-gallery.enable-thumbnail-hover" }
+.thumbnail-hover-font {
+  font-family: arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+
+/* Products 
+---------------------------------------------------*/
+
+// tweak: { "type" : "checkbox", "title" : "Show Category Navigation", "active" : "false", "target" : "#page, #categoryNav", "showOnlyWhenPresent" : ".collection-type-products", "category" : "Products" }
+
+// tweak: { "type" : "font", "title" : "Category Nav Font", "target" : "#page, #categoryNav", "category" : "Products", "showOnlyWhenPresent" : ".collection-type-products.show-category-navigation" }
+.category-nav-font {
+  font-family: "proxima-nova";
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+
+// tweak: { "type" : "color", "title" : "Category Nav Color", "target" : "#page, #categoryNav", "category" : "Products", "showOnlyWhenPresent" : ".collection-type-products.show-category-navigation" }
+@categoryNavColor: #9c9c9c;
+
+// tweak: { "type" : "color", "title" : "Category Nav Active Color", "target" : "#page, #categoryNav", "category" : "Products", "showOnlyWhenPresent" : ".collection-type-products.show-category-navigation" }
+@categoryNavActiveColor: #000000;
+
+
+/* FOOTER
+---------------------------------------------------*/
+
+// tweak: { "category" : "Site Footer", "title" : "Hide Social Icons", "type" : "checkbox", default:false, "target" : "#footer", "showOnlyWhenPresent" : "#footer #socialLinks" }
+
+// tweak: { "category" : "Site Footer", "title" : "Social Icon Style", "type" : "dropdown", options:[ "Normal", "Round", "Square" ], default: "Normal", "target" : "#footer", "showOnlyWhenPresent" : "body:not(.hide-social-icons) #footer #socialLinks" }
+
+// tweak: { "category" : "Site Footer", "title" : "Social Icon Size", "type" : "value", min:16, max:48, "target" : "#footer", "showOnlyWhenPresent" : "body:not(.hide-social-icons) #footer #socialLinks" }
+@socialIconSize: 16px;
+
+// tweak: { "category" : "Site Footer", "title" : "Social Icon Color", "type" : "color", "target" : "#footer", "showOnlyWhenPresent" : "body:not(.hide-social-icons) #footer #socialLinks" }
+@socialIconColor: #000;
+
